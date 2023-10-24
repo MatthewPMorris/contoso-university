@@ -13,16 +13,16 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success'}}
     environment: dev-demo
     steps:
-      -name: Download Artifact
-      uses: dawidd6/action-download-artifact@v2
-      with: 
+      - name: Download Artifact
+        uses: dawidd6/action-download-artifact@v2
+        with: 
           workflow: pack-contoso-university-core-demo.yml
           name: packed-solution
-      -name: Install Power Platform Tool
-      uses: microsoft/powerplatform-actions/actions-install@v1.2.0
-      -name: Import Contoso_university Core
-      uses: microsoft/powerplatform-actions/import-solution@v1.2.0
-      with:
+      - name: Install Power Platform Tool
+        uses: microsoft/powerplatform-actions/actions-install@v1.2.0
+      - name: Import Contoso_university Core
+        uses: microsoft/powerplatform-actions/import-solution@v1.2.0
+        with:
           environment-url: orga7ac6013.crm.dynamics.com
           app-id: ${{ secrets.Appid}}
           client-secret: ${{ secrets.secret}}
