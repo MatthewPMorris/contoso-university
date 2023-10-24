@@ -14,11 +14,11 @@ jobs:
     environment: dev-demo
     steps:
       -uses: dawidd6/action-download-artifact@v2
-       with: 
+      with: 
         workflow: pack-contoso-university-core-demo.yml
         name: packed-solution
       -uses: microsoft/powerplatforms-actions/pack-solution@v1.2.0
-       with:
+      with:
         environment-url: orga7ac6013.crm.dynamics.com
         app-id: ${{ secrets.Appid}}
         client-secret: ${{ secrets.secret}}
