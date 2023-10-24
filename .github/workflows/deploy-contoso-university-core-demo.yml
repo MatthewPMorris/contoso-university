@@ -26,6 +26,6 @@ jobs:
           environment-url: https://orga7ac6013.crm.dynamics.com
           app-id: ${{ secrets.Appid }}
           client-secret: ${{ secrets.secret }}
-          tenant-id: ${{ secrets.tenantid }}
+          tenant-id: ${{ secrets.tenant }}
           solution-file: contoso-university-core-managed.zip
 
