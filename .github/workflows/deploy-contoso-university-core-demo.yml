@@ -27,5 +27,5 @@ jobs:
           app-id: ${{ secrets.Appid }}
           client-secret: ${{ secrets.secret }}
           tenant-id: ${{ secrets.tenant }}
-          solution-file: contoso-university-core-managed.zip
+          solution-file: contoso_university_core_managed.zip
 
